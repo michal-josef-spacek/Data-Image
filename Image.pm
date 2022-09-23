@@ -29,7 +29,7 @@ sub BUILD {
 	# Check id.
 	check_number($self, 'id');
 
-	# Check image.
+	# Check URL.
 	check_length($self, 'url', 255);
 
 	return;
