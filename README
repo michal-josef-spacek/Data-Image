@@ -1,0 +1,90 @@
+NAME
+    Data::Image - Data object for image.
+
+SYNOPSIS
+     use Data::Image;
+
+     my $obj = Data::Image->new(%params);
+     my $comment = $obj->comment;
+     my $id = $obj->id;
+     my $url = $obj->url;
+
+METHODS
+  "new"
+     my $obj = Data::Image->new(%params);
+
+    Constructor.
+
+    Returns instance of object.
+
+    *       "comment"
+
+            Image comment. It's optional. Default value is undef.
+
+    *       "id"
+
+            Image id. It's optional. Default value is undef.
+
+    *       "url"
+
+            URL of image. It's required.
+
+  "comment"
+     my $comment = $obj->comment;
+
+    Get image comment.
+
+    Returns string.
+
+  "id"
+     my $id = $obj->id;
+
+    Get image id.
+
+    Returns number.
+
+  "url"
+     my $url = $obj->url;
+
+    Get URL of image.
+
+    Returns string.
+
+EXAMPLE
+     use strict;
+     use warnings;
+
+     use Data::Image;
+
+     my $obj = Data::Commons::Image->new(
+             'comment' => 'Michal from Czechia',
+             'url' => 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Michal_from_Czechia.jpg',
+     );
+
+     # Print out.
+     print 'Comment: '.$obj->comment."\n";
+     print 'URL: '.$obj->url."\n";
+
+     # Output:
+     # Comment: Michal from Czechia
+     # URL: https://upload.wikimedia.org/wikipedia/commons/a/a4/Michal_from_Czechia.jpg
+
+DEPENDENCIES
+    Mo, Mo::utils.
+
+REPOSITORY
+    <https://github.com/michal-josef-spacek/Data-Image>
+
+AUTHOR
+    Michal Josef Špaček <mailto:skim@cpan.org>
+
+    <http://skim.cz>
+
+LICENSE AND COPYRIGHT
+    © 2022 Michal Josef Špaček
+
+    BSD 2-Clause License
+
+VERSION
+    0.01
+
