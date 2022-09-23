@@ -22,5 +22,6 @@ t/Data-Image/03-new.t
 t/Data-Image/04-comment.t
 t/Data-Image/05-id.t
 t/Data-Image/06-url.t
+t/Data-Image/07-url_cb.t
 xt/Data-Image/01-pod_coverage.t
 xt/Data-Image/02-pod.t

@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Mo qw(build is);
-use Mo::utils qw(check_length check_number check_required);
+use Mo::utils qw(check_code check_length check_number check_required);
 
 our $VERSION = 0.01;
 
@@ -20,6 +20,10 @@ has url => (
 	is => 'ro',
 );
 
+has url_cb => (
+	is => 'ro',
+);
+
 sub BUILD {
 	my $self = shift;
 
@@ -31,6 +35,9 @@ sub BUILD {
 
 	# Check URL.
 	check_length($self, 'url', 255);
+
+	# Check URL callback.
+	check_code($self, 'url_cb');
 
 	return;
 }
@@ -55,6 +62,7 @@ Data::Image - Data object for image.
  my $comment = $obj->comment;
  my $id = $obj->id;
  my $url = $obj->url;
+ my $url_cb = $obj->url_cb;
 
 =head1 METHODS
 
@@ -86,6 +94,12 @@ URL of image.
 It's optional.
 Default value is undef.
 
+=item * C<url_cb>
+
+URL callback. To get URL from code.
+It's optional.
+Default value is undef.
+
 =back
 
 =head2 C<comment>
@@ -111,6 +125,14 @@ Returns number.
 Get URL of image.
 
 Returns string.
+
+=head2 C<url_cb>
+
+ my $url_cb = $obj->url_cb;
+
+Get URL callback.
+
+Returns code.
 
 =head1 EXAMPLE
 
