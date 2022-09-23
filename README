@@ -27,7 +27,7 @@ METHODS
 
     *       "url"
 
-            URL of image. It's required.
+            URL of image. It's optional. Default value is undef.
 
   "comment"
      my $comment = $obj->comment;
