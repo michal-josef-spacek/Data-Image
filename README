@@ -69,7 +69,7 @@ EXAMPLE
 
      use Data::Image;
 
-     my $obj = Data::Commons::Image->new(
+     my $obj = Data::Image->new(
              'comment' => 'Michal from Czechia',
              'url' => 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Michal_from_Czechia.jpg',
      );
