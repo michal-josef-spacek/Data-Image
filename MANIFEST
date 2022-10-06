@@ -20,9 +20,13 @@ README
 t/Data-Image/01-use.t
 t/Data-Image/02-version.t
 t/Data-Image/03-new.t
-t/Data-Image/04-comment.t
-t/Data-Image/05-id.t
-t/Data-Image/06-url.t
-t/Data-Image/07-url_cb.t
+t/Data-Image/04-author.t
+t/Data-Image/05-comment.t
+t/Data-Image/06-height.t
+t/Data-Image/07-id.t
+t/Data-Image/08-size.t
+t/Data-Image/09-url.t
+t/Data-Image/10-url_cb.t
+t/Data-Image/11-width.t
 xt/Data-Image/01-pod_coverage.t
 xt/Data-Image/02-pod.t

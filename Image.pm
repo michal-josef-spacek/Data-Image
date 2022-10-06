@@ -8,11 +8,23 @@ use Mo::utils qw(check_code check_length check_number check_required);
 
 our $VERSION = 0.01;
 
+has author => (
+	is => 'ro',
+);
+
 has comment => (
 	is => 'ro',
 );
 
+has height => (
+	is => 'ro',
+);
+
 has id => (
+	is => 'ro',
+);
+
+has size => (
 	is => 'ro',
 );
 
@@ -24,20 +36,36 @@ has url_cb => (
 	is => 'ro',
 );
 
+has width => (
+	is => 'ro',
+);
+
 sub BUILD {
 	my $self = shift;
+
+	# Check author.
+	check_length($self, 'author', 255);
 
 	# Check comment.
 	check_length($self, 'comment', 1000);
 
+	# Check height.
+	check_number($self, 'height');
+
 	# Check id.
 	check_number($self, 'id');
+
+	# Check size.
+	check_number($self, 'size');
 
 	# Check URL.
 	check_length($self, 'url', 255);
 
 	# Check URL callback.
 	check_code($self, 'url_cb');
+
+	# Check width.
+	check_number($self, 'width');
 
 	return;
 }
@@ -59,10 +87,14 @@ Data::Image - Data object for image.
  use Data::Image;
 
  my $obj = Data::Image->new(%params);
+ my $author = $obj->author;
  my $comment = $obj->comment;
+ my $height = $obj->height;
  my $id = $obj->id;
+ my $size = $obj->size;
  my $url = $obj->url;
  my $url_cb = $obj->url_cb;
+ my $width = $obj->width;
 
 =head1 METHODS
 
@@ -76,15 +108,33 @@ Returns instance of object.
 
 =over 8
 
+=item * C<author>
+
+Image author.
+It's optional.
+Default value is undef.
+
 =item * C<comment>
 
 Image comment.
 It's optional.
 Default value is undef.
 
+=item * C<height>
+
+Image height.
+It's optional.
+Default value is undef.
+
 =item * C<id>
 
 Image id.
+It's optional.
+Default value is undef.
+
+=item * C<size>
+
+Image size.
 It's optional.
 Default value is undef.
 
@@ -100,7 +150,21 @@ URL callback. To get URL from code.
 It's optional.
 Default value is undef.
 
+=item * C<width>
+
+Image width.
+It's optional.
+Default value is undef.
+
 =back
+
+=head2 C<author>
+
+ my $author = $obj->author;
+
+Get image author.
+
+Returns string.
 
 =head2 C<comment>
 
@@ -110,11 +174,27 @@ Get image comment.
 
 Returns string.
 
+=head2 C<height>
+
+ my $height = $obj->height;
+
+Get image height.
+
+Returns number.
+
 =head2 C<id>
 
  my $id = $obj->id;
 
 Get image id.
+
+Returns number.
+
+=head2 C<size>
+
+ my $size = $obj->size;
+
+Get image size.
 
 Returns number.
 
@@ -134,6 +214,14 @@ Get URL callback.
 
 Returns code.
 
+=head2 C<width>
+
+ my $width = $obj->width;
+
+Get image width.
+
+Returns number.
+
 =head1 EXAMPLE
 
 =for comment filename=create_and_print_image.pl
@@ -144,17 +232,29 @@ Returns code.
  use Data::Image;
 
  my $obj = Data::Image->new(
+         'author' => 'Zuzana Zonova',
          'comment' => 'Michal from Czechia',
+         'height' => 2730,
+         'size' => 1040304,
          'url' => 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Michal_from_Czechia.jpg',
+         'width' => 4096,
  );
 
  # Print out.
+ print 'Author: '.$obj->author."\n";
  print 'Comment: '.$obj->comment."\n";
+ print 'Height: '.$obj->height."\n";
+ print 'Size: '.$obj->size."\n";
  print 'URL: '.$obj->url."\n";
+ print 'Width: '.$obj->width."\n";
 
  # Output:
+ # Author: Zuzana Zonova
  # Comment: Michal from Czechia
+ # Height: 2730
+ # Size: 1040304
  # URL: https://upload.wikimedia.org/wikipedia/commons/a/a4/Michal_from_Czechia.jpg
+ # Width: 4096
 
 =head1 DEPENDENCIES
 
