@@ -25,4 +25,7 @@ print 'Width: '.$obj->width."\n";
 # Output:
 # Author: Zuzana Zonova
 # Comment: Michal from Czechia
+# Height: 2730
+# Size: 1040304
 # URL: https://upload.wikimedia.org/wikipedia/commons/a/a4/Michal_from_Czechia.jpg
+# Width: 4096
