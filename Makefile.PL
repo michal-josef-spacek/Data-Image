@@ -19,7 +19,7 @@ perl_version 5.008;
 readme_from 'Image.pm';
 recursive_author_tests('xt');
 requires 'Mo' => 0;
-requires 'Mo::utils' => 0.12;
+requires 'Mo::utils' => 0.14;
 resources 'bugtracker' => 'https://github.com/michal-josef-spacek/Data-Image/issues';
 resources 'homepage' => 'https://github.com/michal-josef-spacek/Data-Image';
 resources 'repository' => 'git://github.com/michal-josef-spacek/Data-Image';
