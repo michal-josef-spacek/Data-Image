@@ -261,6 +261,16 @@ Returns number.
 L<Mo>,
 L<Mo::utils>.
 
+=head1 SEE ALSO
+
+=over
+
+=item L<Data::Commons::Image>
+
+Data object for Wikimedia Commons image.
+
+=back
+
 =head1 REPOSITORY
 
 L<https://github.com/michal-josef-spacek/Data-Image>

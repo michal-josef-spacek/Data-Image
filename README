@@ -145,6 +145,10 @@ EXAMPLE
 DEPENDENCIES
     Mo, Mo::utils.
 
+SEE ALSO
+    Data::Commons::Image
+        Data object for Wikimedia Commons image.
+
 REPOSITORY
     <https://github.com/michal-josef-spacek/Data-Image>
 
