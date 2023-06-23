@@ -1,5 +1,6 @@
 0.03
  - Add dt_created parameter.
+ - Add ERRORS section to doc.
  - Update copyright years.
  - Update Module::Install to 1.21 version.
 

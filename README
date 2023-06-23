@@ -124,11 +124,35 @@ METHODS
 
     Returns number.
 
+ERRORS
+     new():
+             From Mo::utils:
+                     Parameter 'author' has length greater than '255'.
+                             Value: %s
+                     Parameter 'comment' has length greater than '1000'.
+                             Value: %s
+                     Parameter 'dt_created' must be a 'DateTime' object.
+                             Value: %s
+                             Reference: %s
+                     Parameter 'height' must a number.
+                             Value: %s
+                     Parameter 'id' must a number.
+                             Value: %s
+                     Parameter 'size' must a number.
+                             Value: %s
+                     Parameter 'url' has length greater than '255'.
+                             Value: %s
+                     Parameter 'url_cb' must be a code.
+                             Value: %s
+                     Parameter 'width' must a number.
+                             Value: %s
+
 EXAMPLE
      use strict;
      use warnings;
 
      use Data::Image;
+     use DateTime;
 
      my $obj = Data::Image->new(
              'author' => 'Zuzana Zonova',

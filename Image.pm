@@ -244,6 +244,30 @@ Get image width.
 
 Returns number.
 
+=head1 ERRORS
+
+ new():
+         From Mo::utils:
+                 Parameter 'author' has length greater than '255'.
+                         Value: %s
+                 Parameter 'comment' has length greater than '1000'.
+                         Value: %s
+                 Parameter 'dt_created' must be a 'DateTime' object.
+                         Value: %s
+                         Reference: %s
+                 Parameter 'height' must a number.
+                         Value: %s
+                 Parameter 'id' must a number.
+                         Value: %s
+                 Parameter 'size' must a number.
+                         Value: %s
+                 Parameter 'url' has length greater than '255'.
+                         Value: %s
+                 Parameter 'url_cb' must be a code.
+                         Value: %s
+                 Parameter 'width' must a number.
+                         Value: %s
+
 =head1 EXAMPLE
 
 =for comment filename=create_and_print_image.pl
