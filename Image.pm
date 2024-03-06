@@ -5,6 +5,7 @@ use warnings;
 
 use Mo qw(build is);
 use Mo::utils qw(check_code check_isa check_length check_number check_required);
+use Mo::utils::URI qw(check_location);
 
 our $VERSION = 0.04;
 
@@ -67,6 +68,7 @@ sub BUILD {
 
 	# Check URL.
 	check_length($self, 'url', 255);
+	check_location($self, 'url');
 
 	# Check URL callback.
 	check_code($self, 'url_cb');
@@ -152,7 +154,7 @@ Default value is undef.
 
 =item * C<url>
 
-URL of image.
+URL (location) of image.
 It's optional.
 Default value is undef.
 
@@ -224,7 +226,7 @@ Returns number.
 
  my $url = $obj->url;
 
-Get URL of image.
+Get URL (location) of image.
 
 Returns string.
 
@@ -266,6 +268,10 @@ Returns number.
                  Parameter 'url_cb' must be a code.
                          Value: %s
                  Parameter 'width' must a number.
+                         Value: %s
+
+         From Mo::utils::URI:
+                 Parameter 'url' doesn't contain valid location.
                          Value: %s
 
 =head1 EXAMPLE
@@ -313,7 +319,8 @@ Returns number.
 =head1 DEPENDENCIES
 
 L<Mo>,
-L<Mo::utils>.
+L<Mo::utils>,
+L<Mo::utils::URI>.
 
 =head1 SEE ALSO
 

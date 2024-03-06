@@ -147,6 +147,10 @@ ERRORS
                      Parameter 'width' must a number.
                              Value: %s
 
+             From Mo::utils::URI:
+                     Parameter 'url' doesn't contain valid location.
+                             Value: %s
+
 EXAMPLE
      use strict;
      use warnings;
@@ -187,7 +191,7 @@ EXAMPLE
      # Date and time the photo was created: 2022-01-01T00:00:00
 
 DEPENDENCIES
-    Mo, Mo::utils.
+    Mo, Mo::utils, Mo::utils::URI.
 
 SEE ALSO
     Data::Commons::Image

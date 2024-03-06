@@ -4,7 +4,7 @@ use warnings;
 use Data::Image;
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 5;
+use Test::More 'tests' => 6;
 use Test::NoWarnings;
 
 # Test.
@@ -37,4 +37,14 @@ eval {
 };
 is($EVAL_ERROR, "Parameter 'url' has length greater than '255'.\n",
 	"Parameter 'url' has length greater than '255'.");
+clean();
+
+# Test.
+eval {
+	Data::Image->new(
+		'url' => 'urn:isbn:0451450523',
+	);
+};
+is($EVAL_ERROR, "Parameter 'url' doesn't contain valid location.\n",
+	"Parameter 'url' doesn't contain valid location (urn:isbn:0451450523).");
 clean();

@@ -1,6 +1,5 @@
 TODO
 ====
-1. Check url in constructor.
 4.
 
 Applied
@@ -10,3 +9,7 @@ OK [20221006] skim
 
 3. ERRORS section to doc.
 OK [20230623] skim
+
+1. Check url in constructor.
+Check location (url or relative path).
+OK [20240306] skim
