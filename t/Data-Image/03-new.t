@@ -2,6 +2,7 @@ use strict;
 use warnings;
 
 use Data::Image;
+use DateTime;
 use English;
 use Error::Pure::Utils qw(clean);
 use Test::More 'tests' => 6;
@@ -13,9 +14,17 @@ isa_ok($obj, 'Data::Image');
 
 # Test.
 $obj = Data::Image->new(
-	'comment' => 'Michal from Czechia',
-	'id' => 1,
-	'url' => 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Michal_from_Czechia.jpg',
+        'author' => 'Zuzana Zonova',
+        'comment' => 'Michal from Czechia',
+        'dt_created' => DateTime->new(
+                'day' => 1,
+                'month' => 1,
+                'year' => 2022,
+        ),
+        'height' => 2730,
+        'size' => 1040304,
+        'url' => 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Michal_from_Czechia.jpg',
+        'width' => 4096,
 );
 isa_ok($obj, 'Data::Image');
 
