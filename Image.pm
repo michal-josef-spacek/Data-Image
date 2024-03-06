@@ -119,55 +119,73 @@ Constructor.
 =item * C<author>
 
 Image author.
+
 It's optional.
+
 Default value is undef.
 
 =item * C<comment>
 
 Image comment.
+
 It's optional.
+
 Default value is undef.
 
 =item * C<dt_created>
 
 Date and time the image was created.
+
 Value must be L<DateTime> object.
+
 It's optional.
 
 =item * C<height>
 
 Image height.
+
 It's optional.
+
 Default value is undef.
 
 =item * C<id>
 
 Image id.
+
 It's optional.
+
 Default value is undef.
 
 =item * C<size>
 
 Image size.
+
 It's optional.
+
 Default value is undef.
 
 =item * C<url>
 
 URL (location) of image.
+
 It's optional.
+
 Default value is undef.
 
 =item * C<url_cb>
 
 URL callback. To get URL from code.
+
 It's optional.
+
 Default value is undef.
 
 =item * C<width>
 
 Image width.
+
 It's optional.
+
 Default value is undef.
 
 =back
