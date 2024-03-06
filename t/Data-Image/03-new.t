@@ -5,7 +5,7 @@ use Data::Image;
 use DateTime;
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 6;
+use Test::More 'tests' => 7;
 use Test::NoWarnings;
 
 # Test.
@@ -27,6 +27,16 @@ $obj = Data::Image->new(
         'width' => 4096,
 );
 isa_ok($obj, 'Data::Image');
+
+# Test.
+eval {
+	Data::Image->new(
+		'author' => 'x' x 256,
+	);
+};
+is($EVAL_ERROR, "Parameter 'author' has length greater than '255'.\n",
+	"Parameter 'author' has length greater than '255'.");
+clean();
 
 # Test.
 eval {

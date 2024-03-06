@@ -1,5 +1,6 @@
 0.04
  - Add check location for url.
+ - Add test for author error.
  - Improve doc.
  - Improve test in constructor to full-fledged object.
  - Update copyright years.
