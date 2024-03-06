@@ -112,8 +112,6 @@ Data::Image - Data object for image.
 
 Constructor.
 
-Returns instance of object.
-
 =over 8
 
 =item * C<author>
@@ -171,6 +169,8 @@ It's optional.
 Default value is undef.
 
 =back
+
+Returns instance of object.
 
 =head2 C<author>
 

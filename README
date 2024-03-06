@@ -21,8 +21,6 @@ METHODS
 
     Constructor.
 
-    Returns instance of object.
-
     *       "author"
 
             Image author. It's optional. Default value is undef.
@@ -60,6 +58,8 @@ METHODS
     *       "width"
 
             Image width. It's optional. Default value is undef.
+
+    Returns instance of object.
 
   "author"
      my $author = $obj->author;
