@@ -1,6 +1,5 @@
 TODO
 ====
-4. Rewrite check for id to int.
 5.
 
 Applied
@@ -14,3 +13,6 @@ OK [20230623] skim
 1. Check url in constructor.
 Check location (url or relative path).
 OK [20240306] skim
+
+4. Rewrite check for id to int.
+OK [20250303] skim
