@@ -1,4 +1,5 @@
 0.05
+ - Add 'id' parameter to constructor test.
  - Add test for bad id.
  - Retab.
  - Rewrite check of id to check_number_id().
