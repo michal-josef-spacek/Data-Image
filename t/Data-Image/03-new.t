@@ -5,7 +5,7 @@ use Data::Image;
 use DateTime;
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 7;
+use Test::More 'tests' => 8;
 use Test::NoWarnings;
 
 # Test.
@@ -46,6 +46,16 @@ eval {
 };
 is($EVAL_ERROR, "Parameter 'comment' has length greater than '1000'.\n",
 	"Parameter 'comment' has length greater than '1000'.");
+clean();
+
+# Test.
+eval {
+	Data::Image->new(
+		'id' => 'bad',
+	);
+};
+is($EVAL_ERROR, "Parameter 'id' must be a natural number.\n",
+	"Parameter 'id' must be a natural number (bad).");
 clean();
 
 # Test.
